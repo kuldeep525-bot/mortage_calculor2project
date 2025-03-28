@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mortage Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main>
+      <section>
+        <div class="container">
+          <div class="box">
+            <div class="calcultor">
+              <div class="mortage-cal">
+                <div class="mortage-header">
+                  <h1>Mortage Calculator</h1>
+                  <button class="clear-all">Clear All</button>
+                </div>
+
+                <h2>Mortage amount</h2>
+
+                <input
+                  type="number"
+                  min="0"
+                  placeholder="Amount"
+                  id="amount"
+                  name="mortage-amount"
+                  class="input-control"
+                  required
+                />
+
+                <h2>Mortage Term</h2>
+                <input
+                  type="number"
+                  min="0"
+                  placeholder="Years"
+                  id="term"
+                  name="mortage-term"
+                  class="input-control"
+                  required
+                />
+
+                <h2>Interest Rate</h2>
+                <input
+                  type="number"
+                  min="0"
+                  placeholder="Rate %"
+                  id="rate"
+                  name="mortage-rate"
+                  class="input-control"
+                  required
+                />
+
+                <h2>Mortage type</h2>
+
+                <div class="radio">
+                  <input
+                    type="radio"
+                    id="repayment"
+                    name="mortage"
+                    value="repayment"
+                    checked
+                  />
+                  <label for="repayment">Repayment</label>
+
+                  <input
+                    type="radio"
+                    id="interset"
+                    name="mortage"
+                    value="interest"
+                  />
+                  <label for="interset">Interest only</label>
+                </div>
+
+                <button class="cal">
+                  <img src="icon-calculator.svg" alt="icons" class="icons" />
+                  Calculate Repayments
+                </button>
+                <!-- </form> -->
+              </div>
+            </div>
+
+            <div class="result">
+              <img src="illustration-empty.svg" alt="icons" class="images" />
+              <h1 class="para">Results shown here</h1>
+              <p>
+                Complete the form and click "calculate repayments" to see what
+                your monthly repayments would be.
+              </p>
+            </div>
+
+            <div id="output"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

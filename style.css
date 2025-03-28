@@ -1,0 +1,408 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: rgb(182, 207, 208);
+}
+
+
+
+.container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* box */
+.box {
+  height: 600px;
+  width: 70%;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(0, 0%, 100%);
+}
+
+/* calcultor side into the box */
+.calcultor {
+  /* height: 550px; */
+  width: 50%;
+  border-radius: 20px 0px 0px 20px;
+  background-color: hsl(0, 0%, 100%);
+}
+
+/* result side into the box */
+.result {
+  height: 600px;
+  width: 50%;
+  border-radius: 0px 20px 20px 100px;
+  background-color: hsl(202, 55%, 16%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#output {
+  height: 600px;
+  width: 50%;
+  border-radius: 0px 20px 20px 100px;
+  background-color: hsl(202, 55%, 16%);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+  display: none;
+}
+
+.outpara {
+  color: white;
+  font-size: 25px;
+  /* margin-bottom: 200px; */
+}
+
+.pout {
+  text-align: left;
+  color: hsl(200, 26%, 54%);
+  /* margin-bottom: 200px; */
+}
+
+.result-container {
+  width: 100%;
+  height: 300px;
+  background-color: hsl(201, 57%, 12%);
+  border-radius: 10px;
+  border-top: 5px solid hsl(61, 70%, 52%);
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+
+
+.mortage-cal {
+  display: grid;
+  /* flex-wrap: wrap; */
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 500;
+  color: hsl(202, 55%, 16%);
+  /* padding: 10px; */
+}
+
+.mortage-header {
+  display: flex;
+  gap: 50px;
+  margin-bottom: 20px;
+}
+
+.clear-all {
+  border: none;
+  outline: none;
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(200, 26%, 54%);
+  text-decoration: underline;
+  cursor: pointer;
+  transition: 0.5s ease all;
+}
+
+.clear-all:hover {
+  font-size: 15px;
+  color: hsl(202, 55%, 16%);
+}
+
+h2 {
+  font-size: 16px;
+  color: hsl(200, 26%, 54%);
+  font-weight: 500;
+  /* line-gap-override: 20px; */
+}
+
+input {
+  font-size: 20px;
+  text-align: center;
+  margin: 10px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid hsl(200, 26%, 54%);
+  padding: 8px;
+}
+
+
+
+.radio {
+  font-size: 20px;
+  /* gap: 10px; */
+  margin: 10px;
+  color: hsl(202, 55%, 16%);
+  font-weight: 500;
+}
+
+.cal {
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 100px;
+  background-color: hsl(61, 70%, 52%);
+  outline: none;
+  border: none;
+  cursor: pointer;
+  color: hsl(202, 55%, 16%);
+  font-weight: 500;
+  text-align: center;
+  margin-top: 20px;
+  transition: 0.5s ease all;
+}
+
+.cal:hover {
+  font-size: 21px;
+  background-color: hsl(61, 57%, 62%);
+}
+
+.para {
+  color: white;
+  font-size: 25px;
+  margin: 10px;
+}
+
+.result {
+  padding: 40px;
+  flex-direction: column;
+  align-items: center;
+  /* overflow: hidden; */
+}
+
+p {
+  text-align: center;
+  color: hsl(200, 26%, 54%);
+  font-size: 20px;
+}
+
+.month {
+  color: hsl(61, 70%, 52%);
+  font-size: 50px;
+}
+
+.totalincome {
+  font-size: 30px;
+  color: white;
+}
+
+
+@media only screen and (max-width: 375px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+
+  .box {
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .calcultor,
+  .result,
+  #output {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    padding: 20px;
+  }
+
+  .result {
+    border-radius: 0 0 20px 20px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  input {
+    font-size: 18px;
+    padding: 6px;
+  }
+
+  .cal {
+    font-size: 18px;
+    padding: 8px;
+  }
+
+  .month {
+    font-size: 40px;
+  }
+
+  .totalincome {
+    font-size: 24px;
+  }
+
+  .result-container {
+    height: auto;
+    padding: 20px;
+    margin-top: 10px;
+  }
+
+  .radio {
+    /* flex-direction: column; */
+    display: grid;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 275px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .box {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+  .calcultor,
+  .result,
+  #output {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    padding: 15px;
+  }
+
+  .result {
+    border-radius: 0 0 15px 15px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  input {
+    font-size: 16px;
+    padding: 5px;
+    width: 90%;
+  }
+
+  .cal {
+    font-size: 16px;
+    padding: 6px;
+  }
+
+  .month {
+    font-size: 30px;
+  }
+
+  .totalincome {
+    font-size: 20px;
+  }
+
+  .result-container {
+    height: auto;
+    padding: 15px;
+    margin-top: 5px;
+  }
+
+  .outpara,
+  .para {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+
+  .box {
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+    border-radius: 20px;
+    padding: 20px;
+  }
+
+  .calcultor,
+  .result {
+    width: 100%;
+    border-radius: 20px;
+  }
+
+  .result {
+    border-radius: 20px;
+    height: auto;
+    padding: 20px;
+  }
+
+  #output {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    padding: 20px;
+  }
+
+  .result-container {
+    height: auto;
+    padding: 20px;
+    margin-top: 10px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 14px;
+  }
+
+  .cal {
+    font-size: 18px;
+    padding: 8px;
+    border-radius: 50px;
+  }
+
+  .cal:hover {
+    font-size: 19px;
+  }
+
+  input {
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .month {
+    font-size: 40px;
+  }
+
+  .totalincome {
+    font-size: 24px;
+  }
+}
